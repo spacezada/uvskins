@@ -1,28 +1,15 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UV Skins</title>
-<link rel="stylesheet" href="{% static 'estilo/homestyle.css' %}">
+<title>Cadastro</title>
+<link rel="stylesheet" href="{% static 'estilo/cadastrostyle.css' %}">
 </head>
 <body>
-    <section class="produtos">
-        <div class="container">
-            <h2>Nossas Skins em Destaque</h2>
-            <div class="grid">
-                {% for skin in skins %}
-                <div class="produto">
-                    <img src="{{ skin.imagem.url }}" alt="{{ skin.nome }}">
-                    <h3>{{ skin.nome }}</h3>
-                    <p>R$ {{ skin.valor }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+<div class="container">
     
 </body>
 </html>

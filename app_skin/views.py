@@ -1,16 +1,31 @@
 from django.shortcuts import render
-from .models import Skin
+from .models import Skin, Usuario
+
+
 # Create your views here.
+
+def home(request):
+    return render(request,'pags/login.html')
+
 
 def login(request):
     return render(request,'pags/login.html')
 
-def home(request):
+def skin(request):
     skins = Skin.objects.all()
-    return render(request, 'pags/home.html', {'skins': skins})
+    return render(request, 'pags/skin.html', {'skins': skins})
 
 def cadastro(request):
-    return render(request,'pags/cadastro.html')
+    novo_usuario = Usuario()
+    novo_usuario.nome = request.POST.get('nome')
+    novo_usuario.nome = request.POST.get('email')
+    novo_usuario.nome = request.POST.get('senha')
+    novo_usuario.save()
 
+    usuarios = {
+        'usuarios': Usuario.objects.all
+    }
+    
+    return render(request,'pags/cadastro.html', usuarios)
 
 
