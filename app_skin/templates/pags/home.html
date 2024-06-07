@@ -3,13 +3,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro</title>
-<link rel="stylesheet" href="{% static 'estilo/cadastrostyle.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'estilo/homestyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="{% static 'skins/js/home.js' %}"></script>
+    <title>UV SKINS</title>
 </head>
 <body>
-<div class="container">
-    
+    <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+            <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">UV SKINS</span>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Produtos</a></li>
+            <li><a href="">Contate-nos</a></li>
+            <li><a href=""><button class="login-button">Login</button></a></li>
+        </ul>
+    </nav>
+
 </body>
 </html>
+
